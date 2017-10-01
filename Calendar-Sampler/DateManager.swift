@@ -24,7 +24,6 @@ extension Date {
         dateComponents.month = addValue
         return calendar.date(byAdding: dateComponents, to: self)!
     }
-
 }
 
 class DateManager: NSObject {

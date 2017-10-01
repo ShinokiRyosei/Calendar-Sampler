@@ -60,10 +60,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
 
     //3
-
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-    
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CalendarCell
 
         if (indexPath.row % 7 == 0) {
@@ -81,6 +79,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             //月によって1日の場所は異なる(後ほど説明します)
         }
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
     }
 
@@ -125,6 +126,4 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         calenderCollectionView.reloadData()
         headerTitle.text = changeHeaderTitle(date: selectedDate)
     }
-
-
 }
